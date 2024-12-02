@@ -35,7 +35,7 @@ export default defineNuxtConfig({
         { name: "apple-mobile-web-app-title", content: "GloreySings" },
       ],
       link: [
-        { rel: "icon", type: "image/png", href: "" },
+        { rel: "icon", type: "image/png", href: "/logo.png" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com" },
       ],
@@ -49,9 +49,13 @@ export default defineNuxtConfig({
     // "@pinia/nuxt",
     "@vueuse/nuxt",
     "@nuxtjs/tailwindcss",
+    "@nuxt/icon",
     "@nuxtjs/seo",
     "@nuxt/image",
   ],
+  icon: {
+    mode: "svg"
+  },
   runtimeConfig: {},
   css: [],
   vue: {

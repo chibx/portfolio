@@ -11,6 +11,7 @@
 		"prod": "cross-env HOST=0.0.0.0 node .output/server/index.mjs"
 	},
 	"dependencies": {
+		"@nuxt/icon": "^1.8.2",
 		"@nuxt/image": "^1.8.1",
 		"@nuxtjs/seo": "2.0.0-rc.23",
 		"@unhead/vue": "^1.11.10",
