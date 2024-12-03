@@ -42,7 +42,8 @@ export default defineNuxtConfig({
       base: { href: "/" },
     },
     pageTransition: {
-      name: "fade",
+      name: "fade", 
+      mode: 'out-in'
     },
   },
   modules: [
@@ -73,9 +74,9 @@ export default defineNuxtConfig({
       },
     },
   },
-  devServer:{
-     port: 5100,
-     host: '0.0.0.0'
+  devServer: {
+    port: 5100,
+    host: '0.0.0.0'
   },
   vite: {},
 });

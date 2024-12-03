@@ -129,3 +129,22 @@ Management Systems through the continuous use of Magento
 `
     },
 ]
+
+export const links = [
+    {
+        name: 'Home',
+        path: '/'
+    },
+    {
+        name: 'Projects',
+        path: '/projects'
+    },
+    {
+        name: 'About',
+        path: '/about'
+    },
+    {
+        name: 'Contact',
+        path: '/contact'
+    }
+]
