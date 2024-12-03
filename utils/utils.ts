@@ -1,3 +1,6 @@
+import type { Reactive } from "vue"
+import type { InjectionKey } from "vue"
+
 type Project = {
     name: string,
     description: string,
@@ -5,6 +8,21 @@ type Project = {
     link: string
     github?: string
 }
+
+type Experience = {
+    company: string,
+    position: string,
+    date: string,
+    desc: string
+}
+
+export type Toast = {
+    id: number;
+    type: 'success' | 'error';
+    message: string;
+}
+
+export const toastKey: InjectionKey<Reactive<Toast[]>> = Symbol('toast')
 
 
 export const projects: Project[] = [
@@ -27,8 +45,8 @@ export const projects: Project[] = [
         image: '/projects/everything-enterprise.webp',
         link: 'https://client1-portfolio-one.vercel.app',
         github: 'https://github.com/chibx/everything-enterprise'
-    }
-]
+    },
+];
 
 
 export const skills = {
@@ -97,3 +115,17 @@ export const skills = {
         }
     ]
 }
+
+
+export const experience: Experience[] = [
+    {
+       company: 'Obiwezy Enterprise',
+       position: 'Web Admin (Intern)',
+       date: '(2022 - 2024)',
+       desc: `Interned at <a href="https://obiwezy.com/" target="_blank" rel="noopener noreferrer">Obiwezy Enterprise</a> as a Web Administrator, helped maintain the large
+codebase of their website and applications, while also ensuring efficiency and scalabilty of
+their e-commerce platform. I also gained a fundamental knowledge of Content
+Management Systems through the continuous use of Magento
+`
+    },
+]

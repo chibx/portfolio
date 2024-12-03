@@ -1,3 +1,5 @@
+import { toastKey, type Toast } from "~/utils/utils";
+
     export function useObserver(
         el: MaybeRef<HTMLElement[] | HTMLElement | undefined | null>,
         callback: IntersectionObserverCallback,
@@ -23,3 +25,24 @@
           },
         };
       }
+
+
+export function useToast(){
+    const toastsArr = inject(toastKey);
+    const toastId = inject<Ref<number>>('toastId');
+    if(!toastsArr || !toastId){
+        throw new Error('Toast is not provided');
+    }
+    return {
+      add(data: Omit<Toast, 'id'>){
+         toastsArr.push({
+            id: toastId.value,
+            ...data
+         })
+         return toastId.value++
+      },
+      remove(id: number){
+        toastsArr.splice(toastsArr.findIndex(t => t.id === id), 1);
+      }
+    }
+}

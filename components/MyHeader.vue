@@ -22,7 +22,9 @@ const links = [
 ]
 
 watch(()=> route.path, () => {
-    isModalOpen.value = false
+    setTimeout(() => {
+        isModalOpen.value = false
+    }, 100)
 })
 </script>
 
@@ -41,9 +43,9 @@ watch(()=> route.path, () => {
             <span @click="isModalOpen = true" class="hamburger">
                 <Icon name="i-radix-icons:hamburger-menu" size="40" />
             </span>
-            <div class="talk font-bold">
-                <button>Let's Talk</button>
-            </div>
+                <div class="talk font-bold transition duration-300">
+                    <button @click="$router.push('/contact')">Let's Talk</button>
+                </div>
         </header>
 
         <div class="modal" :class="isModalOpen ? 'open' : ''">
@@ -97,7 +99,7 @@ watch(()=> route.path, () => {
     top: 0;
     width: 100%;
     height: 0;
-    z-index: 1;
+    z-index: 20;
     transition: height 0.4s ease;
     background-color: #0c121a;
 }

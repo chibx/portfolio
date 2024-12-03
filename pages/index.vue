@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="flex justify-center items-center flex-col homepage">
+    <div>
         <section class="intro w-full h-full flex items-center justify-around gap-5">
             <div>
                 <!-- <strong class="hello tracking-wide">HELLO I'M</strong> -->
@@ -36,7 +36,7 @@
 
         <section class="about mt-[200px]">
             <h2 class="before-line text-5xl bebas-neue relative inline-block">About</h2>
-            <div class="mt-5">
+            <div class="mt-5 flex justify-center">
                 <p>
                     My name is Chiebidolu Chinaemerem. I am a fullstack web developer, and very passionate about web
                     development and technology.
@@ -103,17 +103,26 @@
                 <h2 class="before-line text-5xl bebas-neue relative inline-block">PROJECTS</h2>
             </div>
 
-            <Projects :count="10" />
+            <Projects :count="7" />
+
+            <div class="mt-20 text-center">
+                <NuxtLink to="/projects" class="link-to-projects inline-block font-bold">See More Projects</NuxtLink>
+            </div>
+        </section>
+
+        <section class="mt-[200px]">
+            <div class="text-center">
+                <h2 class="before-line text-5xl bebas-neue relative inline-block">EXPERIENCE</h2>
+            </div>
+
+            <div>
+                <Experience />
+            </div>
         </section>
     </div>
 </template>
 
 <style scoped>
-.homepage > section {
-    min-width: 300px;
-    width: 90%;
-}
-
 .before-line::before {
     content: '';
     position: absolute;
@@ -138,7 +147,6 @@ a.resume {
 }
 
 .hello {
-    /* color: #5797ff; */
     color: transparent;
     background-clip: text;
     background-image: linear-gradient(180deg, #5797ff 30%, #003180 100%);
@@ -149,8 +157,6 @@ a.resume {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* bottom: 0;
-   left: 0; */
     background-image: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
 }
 
@@ -184,10 +190,7 @@ a.resume {
 }
 
 .benefits-container {
-    /* display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     display: flex;
-
     justify-content: space-between;
     gap: 20px;
     margin-top: 50px;
@@ -204,6 +207,17 @@ a.resume {
 .benefits-container img {
     height: 150px;
     min-width: 150px;
+}
+
+.link-to-projects {
+    padding: 15px 30px;
+    border-radius: 50px;
+    background-image: linear-gradient(150deg, #5797ff 10%, #0048bb 60%, #003180 100%);
+    transition: 0.3s ease;
+}
+
+.link-to-projects:hover {
+    box-shadow: -5px 8px 10px 0px #1a1a2be3;
 }
 
 @media (max-width: 1500px) {

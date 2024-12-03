@@ -15,7 +15,9 @@ useHead({
     <NuxtLayout>
       <main class="flex justify-center min-h-screen w-full h-full px-5 mb-40">
         <div class="min-w-[300px] w-full max-w-[2000px] pt-10">
-          <NuxtPage />
+          <ToastProvider>
+            <NuxtPage />
+          </ToastProvider>
         </div>
       </main>
     </NuxtLayout>
@@ -68,7 +70,6 @@ body {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(50px);
 }
 
 .rotate {
