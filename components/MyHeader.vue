@@ -14,7 +14,9 @@ watch(()=> route.path, () => {
     <div class="select-none">
         <header class="w-full h-20 flex items-center justify-around">
             <!-- <img src="/logo.webp" class="logo" alt="Logo"> -->
-            <Logo class="logo" />
+            <NuxtLink to="/">
+                <Logo class="logo" />
+            </NuxtLink>
             <nav class="links flex items-center gap-10 text-gray-100">
                 <NuxtLink v-for="link in links" :key="link.name" :to="link.path"
                     class="transition duration-300 hover:text-white"
@@ -32,17 +34,17 @@ watch(()=> route.path, () => {
 
         <div class="modal" :class="isModalOpen ? 'open' : ''">
             <div class="mt-5">
-                <span class="flex justify-end pr-[30px]">
+                <span class="flex justify-end pr-[15px]">
                     <Icon @click="isModalOpen = false" class="cursor-pointer" name="material-symbols:close" size="40" />
                 </span>
             </div>
-            <nav class="mt-10 flex flex-col items-center">
+            <section role="navigation" class="mt-10 flex flex-col items-center">
                 <NuxtLink v-for="link in links" :key="link.name" :to="link.path"
                     class="inline-block w-full transition duration-300 font-bold hover:text-white py-5 text-center"
                     :class="route.path === link.path ? 'text-white' : 'opacity-70'">
                     {{ link.name }}
                 </NuxtLink>
-            </nav>
+            </section>
         </div>
     </div>
 </template>
@@ -118,7 +120,6 @@ watch(()=> route.path, () => {
 
     .hamburger {
         display: block;
-        margin-right: 10px;
     }
 }
 </style>

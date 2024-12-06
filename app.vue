@@ -10,11 +10,11 @@ useHead({
 </script>
 
 <template>
-  <div class="h-full poppins text-gray-300">
+  <div class="h-full gothic-a1 text-gray-300">
     <NuxtRouteAnnouncer />
     <NuxtLayout>
-      <main class="flex justify-center min-h-screen w-full h-full px-5 mb-40">
-        <div class="min-w-[300px] w-full max-w-[2000px] pt-10">
+      <main class="flex justify-center min-h-screen w-full h-full px-5 mb-20">
+        <div class="min-w-[300px] w-full max-w-[2000px]">
           <ToastProvider>
             <NuxtPage />
           </ToastProvider>
@@ -70,6 +70,10 @@ body {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+strong{
+  font-weight: bold;
 }
 
 .rotate {

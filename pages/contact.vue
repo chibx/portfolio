@@ -14,7 +14,7 @@ const sendMessage = useDebounceFn(async () => {
   });
 
   await new Promise((r) => { setTimeout(r, 500) })
-  if(response){
+  if(response.success){
      toast.add({
       type: 'success',
       message: 'Email sent successfully'
@@ -68,18 +68,18 @@ const sendMessage = useDebounceFn(async () => {
 
         <div class="flex justify-center mt-10 font-bold">OR</div>
 
-        <div class="flex justify-around gap-2.5 mt-10">
+        <div class="flex justify-center gap-20 mt-10">
           <a href="https://wa.me/2348121847635?text=Hello%20Chiebidolu%20Chinaemerem,%20my%20name%20is%20%5BYour%20Name%5D.%0AI%20am%20interested%20in%20retaining%20your%20services"
             target="_blank" rel="noopener noreferrer">
-            <Icon name="i-logos:whatsapp-icon" size="35" />
+            <Icon name="i-fa6-brands:whatsapp" size="35" />
           </a>
           <a href="https://www.linkedin.com/in/chinaemerem-chiebidolu-802388258/" target="_blank"
             rel="noopener noreferrer">
-            <Icon name="i-logos:linkedin-icon" size="35" />
+            <Icon name="i-fa6-brands:linkedin" size="35" />
           </a>
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiebidoluc%40gmail.com&subject=INTEREST%20IN%20RETAINING%20YOUR%20SERVICES&body=Hello%20Chiebidolu%20Chinaemerem,%20my%20name%20is%20%5BYour%20Name%5D.%0AI%20am%20interested%20in%20retaining%20your%20services"
             target="_blank" rel="noopener noreferrer">
-            <Icon name="i-logos:google-gmail" size="35" />
+            <Icon name="i-fa6-solid:envelope" size="35" />
           </a>
         </div>
       </div>
@@ -94,9 +94,9 @@ const sendMessage = useDebounceFn(async () => {
 }
 
 .form {
-  padding: 50px 15px 20px;
+  padding: 50px 0 20px;
   background-color: #272829;
-  box-shadow: -10px 15px 10px 0px #38383863, 10px 15px 10px 0px #38383863;
+  /* box-shadow: -10px 15px 10px 0px #38383863, 10px 15px 10px 0px #38383863; */
 }
 
 .form-cont input {

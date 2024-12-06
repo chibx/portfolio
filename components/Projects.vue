@@ -34,13 +34,13 @@ const { remove } = useObserver(projectsEl, (entries) => {
                 <div class="description" :id="`project-description-${i}`">
                     {{ project.description }}
                 </div>
-                <div class="links flex gap-4 my-3">
+                <div class="links flex gap-4 my-3.5">
                     <a :href="project.link" target="_blank" rel="noopener noreferrer" title="View my project's website">
-                        <Icon name="material-symbols:open-in-new" size="40" />
+                        <Icon name="material-symbols:open-in-new" size="30" />
                     </a>
                     <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer"
                         title="Check my project on GitHub">
-                        <Icon name="i-mdi:github" size="40" />
+                        <Icon name="i-mdi:github" size="30" />
                     </a>
                 </div>
 
@@ -74,5 +74,10 @@ const { remove } = useObserver(projectsEl, (entries) => {
     overflow: hidden;
     background-color: #313142;
     box-shadow: -12px 15px 10px 0px #1a1a2be3;
+    /* transition: 0.3s linear */
 }
+
+/* .project:hover{
+    transform: scale(1.075) translateY(-10px)
+} */
 </style>

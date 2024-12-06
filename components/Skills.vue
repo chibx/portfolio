@@ -27,29 +27,37 @@ const { remove } = useObserver(skillsRef, (entries) => {
 </script>
 
 <template>
-    <div ref="skills" class="text-center">
-            <h3 class="text-5xl bebas-neue relative inline-block opacity-0 mb-7">{{ type }}</h3>
+    <div ref="skills" class="text-center select-none">
+            <h3 class="text-3xl bebas-neue relative inline-block opacity-0 mb-7">{{ type }}</h3>
 
 
         <div class="skills-box mb-20">
             <div v-for="skill in skills" :key="skill.name" :title="skill.name" class="opacity-0">
                 <Icon :name="skill.icon" size="75" />
-                <strong class="text-xl font-normal tracking-widest">{{ skill.name }}</strong>
+                <strong class="text-lg poppins font-normal tracking-widest">{{ skill.name }}</strong>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
-.skills-box {
+/* .skills-box {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 70px 30px;
+} */
+
+.skills-box {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
     gap: 70px 30px;
 }
 
 .skills-box > div {
     display: flex;
     flex-direction: column;
+    min-width: 150px;
     gap: 15px;
     justify-content: center;
     align-items: center;

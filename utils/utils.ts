@@ -20,6 +20,8 @@ export type Toast = {
     id: number;
     type: 'success' | 'error';
     message: string;
+    /** In ms */
+    duration?: number
 }
 
 export const toastKey: InjectionKey<Reactive<Toast[]>> = Symbol('toast')
@@ -72,6 +74,10 @@ export const skills = {
             icon: 'i-vscode-icons:file-type-typescript-official'
         },
         {
+            name: 'Vite',
+            icon: 'i-vscode-icons:file-type-vite'
+        },
+        {
             name: 'Vue.js',
             icon: 'i-vscode-icons:file-type-vue'
         },
@@ -82,6 +88,14 @@ export const skills = {
         {
             name: 'Node.js',
             icon: 'i-vscode-icons:file-type-node'
+        },
+        {
+            name: 'Docker',
+            icon: 'i-devicon:docker'
+        },
+        {
+            name: 'PostgreSQL',
+            icon: 'i-devicon:postgresql'
         },
         {
             name: 'Git',
@@ -121,7 +135,7 @@ export const experience: Experience[] = [
     {
        company: 'Obiwezy Enterprise',
        position: 'Web Admin (Intern)',
-       date: '(2022 - 2024)',
+       date: '(Nov 2022 - May 2024)',
        desc: `Interned at <a href="https://obiwezy.com/" target="_blank" rel="noopener noreferrer">Obiwezy Enterprise</a> as a Web Administrator, helped maintain the large
 codebase of their website and applications, while also ensuring efficiency and scalabilty of
 their e-commerce platform. I also gained a fundamental knowledge of Content

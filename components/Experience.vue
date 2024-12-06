@@ -10,8 +10,8 @@
         <li class="mb-5 flex gap-5" v-for="_experience in experience">
             <div class="ball"></div>
             <div class="max-w-[1200px]">
-                <h3 class="text-3xl bebas-neue inline-block">{{ _experience.company }}</h3>
-                <div class="flex flex-wrap gap-x-10 gap-y-2.5 items-center justify-between mt-2.5 mb-5"><strong>{{ _experience.position
+                <h3 class="text-3xl bebas-neue tracking-wide inline-block">{{ _experience.company }}</h3>
+                <div class="flex flex-wrap gap-x-[100px] gap-y-2.5 items-center justify-between mt-2.5 mb-5"><strong>{{ _experience.position
                         }}</strong> <em>{{ _experience.date }}</em></div>
                 <p v-html="_experience.desc"></p>
             </div>

@@ -8,20 +8,22 @@
             <div>
                 <!-- <strong class="hello tracking-wide">HELLO I'M</strong> -->
                 <div>
-                    <h1 class="text-7xl bebas-neue text-white">HEY! I'M CHINAEMEREM</h1>
+                    <h1 class="text-7xl bebas-neue text-white">HEY👋! I'M CHINAEMEREM</h1>
                     <h2 class="text-5xl hello bebas-neue tracking-wider">I AM A FULLSTACK WEB DEVELOPER</h2>
                 </div>
                 <div class="links flex flex-wrap items-center justify-between gap-2.5">
-                    <div class="flex gap-6 mt-5 social-links">
-                        <a href="https://github.com/chibx" target="_blank" rel="noopener noreferrer">
+                    <div class="flex gap-10 mt-5">
+                        <a href="https://github.com/chibx" title="Follow me on GitHub" target="_blank"
+                            rel="noopener noreferrer">
                             <Icon name="i-fa6-brands:github" size="35" />
                         </a>
-                        <a href="https://twitter.com/chiebidolu06" target="_blank" rel="noopener noreferrer">
-                            <Icon name="i-fa6-brands:twitter" size="35" />
-                        </a>
-                        <a href="https://www.linkedin.com/in/chinaemerem-chiebidolu-802388258/" target="_blank"
-                            rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/chinaemerem-chiebidolu-802388258/"
+                            title="Follow me on LinkedIn" target="_blank" rel="noopener noreferrer">
                             <Icon name="i-fa6-brands:linkedin" size="35" />
+                        </a>
+                        <a href="https://twitter.com/chiebidolu06" title="Follow me on Twitter" target="_blank"
+                            rel="noopener noreferrer">
+                            <Icon name="i-fa6-brands:x-twitter" size="35" />
                         </a>
                     </div>
                     <a href="/resume.pdf" target="_blank" rel="noopener" class="resume">View CV</a>
@@ -38,7 +40,7 @@
             <h2 class="before-line text-5xl bebas-neue relative inline-block">About</h2>
             <div class="mt-5 flex justify-center">
                 <p>
-                    My name is Chiebidolu Chinaemerem. I am a fullstack web developer, and very passionate about web
+                    My name is Chiebidolu Chinaemerem. I am a fullstack web developer who is very passionate about web
                     development and technology.
                     I love to build scalable and functional fullstack web applications, with my goto programming
                     language
@@ -55,34 +57,70 @@
             <div class="benefits-container">
                 <div>
                     <div>
-                        <NuxtImg src="/resp2.webp" alt="Responsive Design" />
+                        <NuxtImg src="/mixed.webp" alt="Responsive Design" />
                     </div>
                     <div>
                         <h2 class="text-3xl bebas-neue">Responsive Design</h2>
                         <p class="mt-2.5">
-                            By hiring me, you get a fully responsive website that looks great on all devices.
+                            When you hire me, you get a fully responsive website that looks great on all devices.
                         </p>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <NuxtImg src="/fast3.webp" alt="Quick Delivery" />
+                        <!-- <NuxtImg src="/fast3.webp" alt="Performance" /> -->
+                        <NuxtImg class="scale-75" src="/perf.webp" alt="Performance" />
+                    </div>
+                    <div>
+                        <h2 class="text-3xl bebas-neue">Performance</h2>
+                        <p class="mt-2.5">
+                            When you hire me, you'll get high performant web applications.
+                            Scalability and efficiency would be the least of your concerns
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <NuxtImg src="/clock.webp" alt="Clock" />
                     </div>
                     <div>
                         <h2 class="text-3xl bebas-neue">Quick Delivery</h2>
                         <p class="mt-2.5">
-                            By hiring me, you are sure to get great results on time
+                            When you hire me, you are sure to get great results on time
                         </p>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <NuxtImg src="/resp2.webp" alt="Beautiful Outcome" />
+                        <NuxtImg src="/cash.webp" alt="Budget Friendly" />
+                    </div>
+                    <div>
+                        <h2 class="text-3xl bebas-neue">Budget Friendly</h2>
+                        <p class="mt-2.5">
+                            When you hire me, you get great results at an affordable price.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <NuxtImg class="scale-75" src="/bugs.webp" alt="Error Handling" />
+                    </div>
+                    <div>
+                        <h2 class="text-3xl bebas-neue">Error Handling</h2>
+                        <p class="mt-2.5">
+                            Nobody is perfect, but that doesn't prevent me from producing 99.99% error-free web
+                            applications
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <NuxtImg src="/star.webp" alt="Beautiful Outcome" />
                     </div>
                     <div>
                         <h2 class="text-3xl bebas-neue">Outstanding Result</h2>
                         <p class="mt-2.5">
-                            By hiring me, you'll surely be glad you did.
+                            When you hire me, you'll surely be glad you did.
                         </p>
                     </div>
                 </div>
@@ -95,6 +133,14 @@
             </div>
             <div class="mt-20">
                 <Skills v-for="_skills, type in skills" :skills="_skills" :type="type" :key="type" />
+
+               <div class="w-full text-center">
+                   <p>
+                       My true strength lies in programming languages/frameworks defined in the <strong>Core</strong>
+                       section above, but that doesn't mean
+                       I can't work with languages/frameworks defined in the secondary section as well.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -123,14 +169,14 @@
 </template>
 
 <style scoped>
-.before-line::before {
+/* .before-line::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 5px;
     bottom: -2px;
     background-color: #5797ff;
-}
+} */
 
 a.resume {
     display: inline-flex;
@@ -140,10 +186,6 @@ a.resume {
     margin-top: 20px;
     border-radius: 50px;
     background-image: linear-gradient(150deg, #5797ff 10%, #0048bb 60%, #003180 100%);
-}
-
-.social-links a:hover {
-    color: #5797ff;
 }
 
 .hello {
@@ -191,22 +233,22 @@ a.resume {
 
 .benefits-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px 30px;
     margin-top: 50px;
 }
 
 .benefits-container > div {
     display: flex;
     gap: 20px;
-    justify-content: space-around;
     align-items: center;
-    width: clamp(300px, 100%, 500px);
+    width: clamp(300px, 100%, 600px);
 }
 
 .benefits-container img {
-    height: 150px;
-    min-width: 150px;
+    height: 75px;
+    min-width: 75px;
 }
 
 .link-to-projects {
@@ -221,12 +263,12 @@ a.resume {
 }
 
 @media (max-width: 1500px) {
-    .benefits-container {
+    /* .benefits-container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         place-items: center;
         gap: 50px;
-    }
+    } */
 
     .benefits-container > div:nth-child(3) {
         grid-column: span 2;
@@ -235,10 +277,10 @@ a.resume {
 }
 
 @media (max-width: 1160px) {
-    .benefits-container {
+    /* .benefits-container {
         grid-template-columns: minmax(300px, 1fr);
         place-items: center;
-    }
+    } */
 
     .benefits-container > div:nth-child(3) {
         grid-column: span 1;

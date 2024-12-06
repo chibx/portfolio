@@ -35,11 +35,19 @@ export function useToast(){
     }
     return {
       add(data: Omit<Toast, 'id'>){
+        const curID = toastId.value++
          toastsArr.push({
-            id: toastId.value,
+            id: curID,
             ...data
          })
-         return toastId.value++
+         if(import.meta.client){
+          // I could have tracked the timer by mapping it to the ID of the toast so i could dispose of it when the toast is removed,
+          // but this is simpler as regardless of the timeouts, the method is kinda indempotent
+           setTimeout(() => {
+             this.remove(curID)    
+          }, data.duration || 3000)
+        }
+         return 
       },
       remove(id: number){
         toastsArr.splice(toastsArr.findIndex(t => t.id === id), 1);
