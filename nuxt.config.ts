@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: false },
   site: {
-    url: "glorey-sings.vercel.app",
+    url: "chibx.vercel.app",
     indexable: true,
   },
   router: { options: { scrollBehaviorType: "smooth" } },
