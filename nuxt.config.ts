@@ -42,7 +42,7 @@ export default defineNuxtConfig({
       base: { href: "/" },
     },
     pageTransition: {
-      name: "fade", 
+      name: "fade-up", 
       mode: 'out-in'
     },
   },

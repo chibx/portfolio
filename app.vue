@@ -1,5 +1,6 @@
 <script setup lang="ts">
 useHead({
+  titleTemplate: '%s | Chinaemerem Chiebidolu',
   link: [
     {
       href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gothic+A1:wght@400;700&family=Poppins:wght@400;500;700&family=Roboto:wght@500;700&display=swap",
@@ -7,6 +8,7 @@ useHead({
     }
   ]
 })
+const { y } = useWindowScroll({behavior: 'smooth'})
 </script>
 
 <template>
@@ -20,6 +22,11 @@ useHead({
           </ToastProvider>
         </div>
       </main>
+      <Transition name="arrow">
+        <span class="arrow-up" v-show="y > 500" @click="y = 0">
+          <Icon name="material-symbols:chevron-right-rounded" size="30" class="-rotate-90" />
+        </span>
+      </Transition>
     </NuxtLayout>
   </div>
 </template>
@@ -46,6 +53,18 @@ body {
   /* background: repeating-linear-gradient(120deg, rgba(44, 4, 186, 1) 0%, #3a136d 20%, #18015a 21%, rgb(115, 66, 250) 35%); */
 }
 
+.arrow-up {
+  background-color: #e6e6e6;
+  color: #272829;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
 .bebas-neue {
   font-family: "Bebas Neue", serif;
 }
@@ -62,17 +81,37 @@ body {
   font-family: "Roboto", serif;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: .4s ease-out;
+.arrow-enter-active,
+.arrow-leave-active {
+  transition: .3s;
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.arrow-enter-from,
+.arrow-leave-to {
   opacity: 0;
 }
 
-strong{
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: .3s ease-out;
+}
+
+/* .fade-up-enter-from,
+.fade-up-leave-to {
+
+} */
+
+.fade-up-enter-from {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.fade-up-leave-to {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+strong {
   font-weight: bold;
 }
 

@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-
+useHead({
+  title: 'My Projects'
+})
 </script>
 
 <template>

@@ -20,7 +20,7 @@
 </template>
 
 <style scoped>
-.experience {}
+/* .experience {} */
 
 .ball {
     padding: 10px;

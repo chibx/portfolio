@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+useHead({
+  title: 'Reach Out to Me',
+})
+
 const isMessageSending = ref(false);
 const formEl = useTemplateRef('form')
 const toast = useToast()
@@ -32,13 +36,13 @@ const sendMessage = useDebounceFn(async () => {
           <form @submit.prevent="sendMessage" ref="form" action="/api/contact-me" method="post"
             class="contact-form w-full flex flex-col gap-5">
             <div>
-              <input type="email" name="sender_email" placeholder="Email Address" required />
+              <input type="email" name="sender_email" placeholder="Email Address" aria-label="Your Email Address" required />
             </div>
             <div>
-              <input type="text" name="sender_name" placeholder="Full Name" required />
+              <input type="text" name="sender_name" placeholder="Full Name" aria-label="Full Name" required />
             </div>
             <div>
-              <textarea name="message" placeholder="Message goes here" required></textarea>
+              <textarea name="message" placeholder="Message goes here" aria-label="Message Body" required></textarea>
             </div>
 
             <div>
@@ -62,6 +66,8 @@ const sendMessage = useDebounceFn(async () => {
                 </template>
               </button>
             </div>
+
+            <small class="text-white opacity-75">This form shows you a nice response but it won&apos;t inform me. You should prefer to use one of the methods below, as this form is to complement the page.</small>
           </form>
         </div>
 
@@ -94,12 +100,13 @@ const sendMessage = useDebounceFn(async () => {
 }
 
 .form {
-  padding: 50px 0 20px;
-  background-color: #272829;
+  padding: 50px 0 0px;
   /* box-shadow: -10px 15px 10px 0px #38383863, 10px 15px 10px 0px #38383863; */
 }
 
 .form-cont input {
+  color: white;
+  background-color: #333435;
   width: 100%;
   padding: 15px;
 }
@@ -110,6 +117,8 @@ const sendMessage = useDebounceFn(async () => {
 }
 
 .form-cont textarea {
+  color: white;
+  background-color: #333435;
   width: 100%;
   padding: 10px;
   height: 200px;
@@ -121,6 +130,6 @@ const sendMessage = useDebounceFn(async () => {
   width: 100%;
   font-weight: bold;
   overflow: hidden;
-  background-image: linear-gradient(150deg, #5797ff 0%, #0048bb 20%, #003180 80%, #022969 100%);
+  background-image: linear-gradient(150deg, #003180 0%, #0048bb 25%, #0048bb 75%, #022969 100%);
 }
 </style>
