@@ -15,15 +15,22 @@ const sendMessage = useDebounceFn(async () => {
   const response = await $fetch('/api/contact-me', {
     method: 'POST',
     body: formData
-  });
+  }).catch(()=>({success: false}));
 
   await new Promise((r) => { setTimeout(r, 500) })
   if(response.success){
-     toast.add({
+    toast.add({
       type: 'success',
       message: 'Email sent successfully'
      })
   }
+  else{
+    toast.add({
+      type: 'error',
+      message: 'Email couldn\'t be sent\nSomething went wrong'
+    })
+  }
+  
   isMessageSending.value = false;
 }, 500)
 </script>
@@ -67,7 +74,7 @@ const sendMessage = useDebounceFn(async () => {
               </button>
             </div>
 
-            <small class="text-white opacity-75">This form shows you a nice response but it won&apos;t inform me. You should prefer to use one of the methods below, as this form is to complement the page.</small>
+            <small class="text-white opacity-75">This form is just meant to complement the page so it won&apos;t actually reach me. You should prefer to use one of the methods below, as this form is to complement the page.</small>
           </form>
         </div>
 

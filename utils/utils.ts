@@ -38,7 +38,7 @@ export const projects: Project[] = [
         name: 'WinWeb',
         description: 'The closest Windows 11 can be on the web',
         image: '/projects/winweb.webp',
-        link: 'https://winweb-pied.vercel.app',
+        link: 'https://winweb.vercel.app',
         github: 'https://github.com/chibx/WinWeb'
     },
     {

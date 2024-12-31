@@ -43,9 +43,11 @@ export function useToast(){
          if(import.meta.client){
           // I could have tracked the timer by mapping it to the ID of the toast so i could dispose of it when the toast is removed,
           // but this is simpler as regardless of the timeouts, the method is kinda indempotent
-           setTimeout(() => {
-             this.remove(curID)    
-          }, data.duration || 3000)
+          if(data.duration !== Infinity){
+            setTimeout(() => {
+              this.remove(curID)    
+            }, data.duration || 3000)
+          } 
         }
          return 
       },

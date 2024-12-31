@@ -53,24 +53,15 @@ useHead({
     </section>
 
     <section>
-      <h2 class="text-2xl bebas-neue mt-10 mb-2.5">THINGS I DO IN MY FREE TIME</h2>
+      <h2 class="text-2xl bebas-neue mt-10 mb-2.5">MY HOBBIES</h2>
 
       <ul>
         <li>Programming (Can't escape this one)</li>
         <li>Listening to songs (It goes well with Programming)</li>
-        <li>Watching Anime 😎 (You've gotta try this one)</li>
-        <li>Playing video games (Once in a while)</li>
+        <li>Watching Anime 😎 (Love this one)</li>
         <li>Reading books (Mostly programming documentation)</li>
         <li>Forcing myself to take a break from programming</li>
       </ul>
-
-      <p class="mt-10">
-        As much as I love anime, programming seems to draw me in, hence I spend most of my time programming. <br />
-        Regardless of it being my time to relax, I still hear the voice of my laptop telling me to come back and write
-        code 😅<br />
-        Also, just because I love anime a lot doesn't make me a weeb or weird, people like me have what they love and I
-        believe they shouldn't be criticized for something like this <em>(just saying)</em>
-      </p>
     </section>
 
     <section>
@@ -106,5 +97,8 @@ p {
 
 ul li {
   margin-bottom: 15px;
+}
+strong{
+  color: rgb(245, 245, 245);
 }
 </style>
