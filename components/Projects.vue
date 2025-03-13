@@ -27,11 +27,11 @@ const { remove } = useObserver(projectsEl, (entries) => {
     <div class="projects mt-20" ref="projects">
         <div v-for="project, i in projects.slice(0, count)" class="project opacity-0"
             :aria-label="`Project Name - ${project.name}`" :aria-describedby="`project-description-${i}`">
-            <NuxtImg class="w-full" :src="project.image" :alt="`Picture of my project, ${project.name}`" />
+            <NuxtImg class="w-full" :src="project.image" :alt="`${project.name}`" />
 
             <div class="details flex flex-col mt-2.5 px-5">
                 <h3 class="text-lg gothic-a1 font-bold" aria-label="Project's Name">{{ project.name }}</h3>
-                <div class="description" :id="`project-description-${i}`">
+                <div class="description sm:text-lg text-base leading-7 mt-1" :id="`project-description-${i}`">
                     {{ project.description }}
                 </div>
                 <div class="links flex gap-4 my-3.5">
@@ -72,9 +72,8 @@ const { remove } = useObserver(projectsEl, (entries) => {
     max-width: 450px;
     border-radius: 5px;
     overflow: hidden;
-    background-color: #313142;
-    box-shadow: -12px 15px 10px 0px #1a1a2be3;
-    /* transition: 0.3s linear */
+    /* background-color: #00012b; */
+    background: linear-gradient(120deg, #1a1b46 25%, #161744 45%, #15153b 65%, #313163 105%);
 }
 
 /* .project:hover{

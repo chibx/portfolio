@@ -6,10 +6,10 @@ useHead({
 
 <template>
   <div class="pt-5  gothic-a1">
-    <h1 class="text-4xl bebas-neue text-center">ABOUT ME</h1>
+    <h1 class="text-5xl bebas-neue text-center tracking-wider">ABOUT ME</h1>
 
     <section class="text-lg mt-10">
-      <h2 class="text-2xl bebas-neue mb-2.5">HEY👋 GLAD YOU MADE IT HERE</h2>
+      <h2 class="text-2xl bebas-neue mb-2.5 tracking-wider">HEY👋 GLAD YOU MADE IT HERE</h2>
 
       <p>
         My name is Chiebidolu Chinaemerem, and I am a fullstack web developer who is very passionate about web
@@ -32,11 +32,12 @@ useHead({
     </section>
 
     <section>
-      <h2 class="text-2xl bebas-neue mt-10">THINGS I LEARNT ALONG THE WAY</h2>
+
+      <h2 class="text-2xl bebas-neue mt-10 tracking-wide">THINGS I LEARNT ALONG THE WAY</h2>
 
       <div class="flex flex-wrap gap-x-20 gap-y-5">
         <div v-for="skill, type in skills">
-          <h3 class="text-2xl bebas-neue mt-5 mb-2.5">{{ type }}</h3>
+          <h3 class="text-2xl bebas-neue mt-5 mb-2.5 tracking-wider">{{ type }}</h3>
           <ol>
             <li class="flex items-center gap-2.5 mb-2" v-for="{ icon, name } in skill">
               <Icon :name="icon" size="25" />
@@ -45,15 +46,11 @@ useHead({
           </ol>
         </div>
       </div>
-      
-      <p class="mt-10">
-        My true strength lies in programming languages/frameworks defined in the <strong>"Core"</strong> section above, but that doesn't mean
-        I can't work with languages/frameworks defined in the secondary section as well.
-      </p>
+
     </section>
 
     <section>
-      <h2 class="text-2xl bebas-neue mt-10 mb-2.5">MY HOBBIES</h2>
+      <h2 class="text-2xl bebas-neue mt-10 mb-2.5 tracking-wider">MY HOBBIES</h2>
 
       <ul>
         <li>Programming (Can't escape this one)</li>
@@ -65,10 +62,10 @@ useHead({
     </section>
 
     <section>
-      <h2 class="text-2xl bebas-neue mt-10 mb-2.5">LET'S SHARE OPINIONS</h2>
+      <h2 class="text-2xl bebas-neue mt-10 mb-2.5 tracking-wider">LET'S SHARE OPINIONS</h2>
       <div>I am willing to connect if you are 😉</div>
 
-      <div class="flex gap-7 mt-3">
+      <div class="flex gap-7 mt-5">
         <a href="https://wa.me/2348121847635?text=Hello%20Chiebidolu%20Chinaemerem,%20my%20name%20is%20%5BYour%20Name%5D.%0A"
           target="_blank" rel="noopener noreferrer">
           <Icon name="i-fa6-brands:whatsapp" size="30" />
@@ -98,7 +95,8 @@ p {
 ul li {
   margin-bottom: 15px;
 }
-strong{
+
+strong {
   color: rgb(245, 245, 245);
 }
 </style>

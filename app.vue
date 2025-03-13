@@ -6,9 +6,15 @@ useHead({
       href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Gothic+A1:wght@400;700&family=Poppins:wght@400;500;700&family=Roboto:wght@500;700&display=swap",
       rel: "stylesheet"
     }
+  ],
+  meta: [
+    {
+      name: "description",
+      content: "Chinaemerem Chiebidolu Ekenedilichukwu, chiebidolu06, @chiebidolu06"
+    }
   ]
 })
-const { y } = useWindowScroll({behavior: 'smooth'})
+const { y } = useWindowScroll({ behavior: 'smooth' })
 </script>
 
 <template>
@@ -46,11 +52,10 @@ body {
 
 body {
   overflow-x: hidden;
-  /* background-color: rgb(10, 10, 25); */
-  /* background-color: #0c121a; */
-  background-color: #272829;
-  /* background: linear-gradient(120deg, rgba(44, 4, 186, 1) 0%, rgba(108, 2, 255, 1) 32%, rgba(104, 95, 255, 1) 61%, rgba(68, 0, 255, 1) 95%); */
-  /* background: repeating-linear-gradient(120deg, rgba(44, 4, 186, 1) 0%, #3a136d 20%, #18015a 21%, rgb(115, 66, 250) 35%); */
+  /* background-color: #272829; */
+  /* background: linear-gradient(120deg, rgb(6, 0, 29) 0%, #220f3b 20%, #0f003a 21%, rgb(19, 13, 36) 35%); */
+  /* background: repeating-linear-gradient(120deg, rgb(6, 0, 29) 0%, #220f3b 20%, #0f003a 21%, rgb(19, 13, 36) 35%); */
+  background: repeating-linear-gradient(120deg, #00012b 25%, #00013d 45%, #000142 65%, #00012b 105%);
 }
 
 .arrow-up {
@@ -58,7 +63,7 @@ body {
   color: #272829;
   position: fixed;
   right: 20px;
-  bottom: 20px;
+  bottom: 30px;
   border-radius: 50%;
   cursor: pointer;
   padding: 10px;

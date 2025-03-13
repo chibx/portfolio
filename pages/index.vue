@@ -40,7 +40,7 @@ useHead({
 
         <section class="about mt-[200px]">
             <h2 class="before-line text-5xl bebas-neue relative inline-block">About</h2>
-            <div class="mt-5 flex justify-center">
+            <div class="mt-5 flex justify-center text-lg">
                 <p>
                     My name is Chiebidolu Chinaemerem. I am a fullstack web developer who is very passionate about web
                     development and technology.
@@ -88,7 +88,8 @@ useHead({
                     <div>
                         <h2 class="text-3xl bebas-neue">Quick Delivery</h2>
                         <p class="mt-2.5">
-                            When you hire me, you are sure to get great results on time
+                            <!-- When you hire me, you are sure to get great results on time -->
+                            When you hire me, you are definitely going to get what you need on time
                         </p>
                     </div>
                 </div>
@@ -99,7 +100,7 @@ useHead({
                     <div>
                         <h2 class="text-3xl bebas-neue">Budget Friendly</h2>
                         <p class="mt-2.5">
-                            When you hire me, you get great results at an affordable price.
+                            When you hire me, you get excellent results at an affordable price.
                         </p>
                     </div>
                 </div>
@@ -110,8 +111,7 @@ useHead({
                     <div>
                         <h2 class="text-3xl bebas-neue">Error Handling</h2>
                         <p class="mt-2.5">
-                            Nobody is perfect, but that doesn't prevent me from producing 99.99% error-free web
-                            applications
+                            Nobody is perfect, but that doesn't mean I let those nasty errors show up
                         </p>
                     </div>
                 </div>
@@ -135,14 +135,6 @@ useHead({
             </div>
             <div class="mt-20">
                 <Skills v-for="_skills, type in skills" :skills="_skills" :type="type" :key="type" />
-
-               <div class="w-full text-center">
-                   <p>
-                       My true strength lies in programming languages/frameworks defined in the <strong>Core</strong>
-                       section above, but that doesn't mean
-                       I can't work with languages/frameworks defined in the secondary section as well.
-                    </p>
-                </div>
             </div>
         </section>
 
