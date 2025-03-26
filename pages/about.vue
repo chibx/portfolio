@@ -18,7 +18,7 @@ useHead({
         language being <strong>JavaScript</strong>.
       </p>
       <p>
-        Born on July 15, 2006, I am a full & proud citizen of my motherland, Nigeria. I am currently studying
+        I am a full & proud citizen of my motherland, Nigeria. I am currently studying
         <strong>Data Science</strong> at
         <strong>University of Lagos</strong>, Nigeria, before which I studied in <strong>Jextoban Secondary
           School</strong>
