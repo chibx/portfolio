@@ -1,43 +1,38 @@
 {
-	"name": "nuxt-app",
-	"private": true,
-	"type": "module",
-	"scripts": {
-		"build": "nuxt build",
-		"dev": "nuxt dev",
-		"generate": "nuxt generate",
-		"preview": "nuxt preview",
-		"postinstall": "nuxt prepare",
-		"prod": "cross-env HOST=0.0.0.0 node .output/server/index.mjs"
-	},
-	"dependencies": {
-		"@nuxt/icon": "^1.8.2",
-		"@nuxt/image": "^1.8.1",
-		"@nuxtjs/seo": "2.0.0-rc.23",
-		"@unhead/vue": "^1.11.10",
-		"@vueuse/components": "^11.1.0",
-		"@vueuse/core": "^11.1.0",
-		"@vueuse/nuxt": "^11.1.0",
-		"atropos": "^2.0.2",
-		"motion": "11.11.17",
-		"nuxt": "^3.14.0",
-		"swiper": "^11.1.14",
-		"vee-validate": "^4.14.6",
-		"vue": "3.5.13",
-		"vue-router": "latest",
-		"zod": "^3.22.4"
-	},
-	"devDependencies": {
-		"@eslint/js": "^9.13.0",
-		"@iconify/vue": "^4.1.2",
-		"@nuxtjs/tailwindcss": "^6.12.2",
-		"@types/eslint__js": "^8.42.3",
-		"autoprefixer": "^10.4.20",
-		"eslint": "^9.13.0",
-		"postcss": "^8.4.47",
-		"tailwindcss": "^3.4.14",
-		"typescript": "^5.6.2",
-		"typescript-eslint": "^8.12.2"
-	},
-	"packageManager": "pnpm@9.14.2+sha512.6e2baf77d06b9362294152c851c4f278ede37ab1eba3a55fda317a4a17b209f4dbb973fb250a77abc463a341fcb1f17f17cfa24091c4eb319cda0d9b84278387"
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prod": "cross-env HOST=0.0.0.0 node .output/server/index.mjs"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^2.0.0",
+    "@nuxt/image": "^1.11.0",
+    "@nuxtjs/seo": "3.2.2",
+    "@vueuse/components": "^13.9.0",
+    "@vueuse/core": "^13.9.0",
+    "@vueuse/nuxt": "^13.9.0",
+    "motion": "12.23.22",
+    "nuxt": "^4.1.2",
+    "swiper": "^12.0.2",
+    "vue": "^3.5.22",
+    "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@iconify/vue": "^5.0.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^4.1.14",
+    "@tailwindcss/vite": "^4.1.14",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.45.0"
+  },
+  "packageManager": "pnpm@10.18.0"
 }
