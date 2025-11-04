@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 useHead({
-    title: 'Home'
-})
+    title: "Home",
+});
 </script>
 
 <template>
@@ -15,16 +15,28 @@ useHead({
                 </div>
                 <div class="links flex flex-wrap items-center justify-between gap-2.5">
                     <div class="flex gap-10 mt-5">
-                        <a href="https://github.com/chibx" title="Follow me on GitHub" target="_blank"
-                            rel="noopener noreferrer">
+                        <a
+                            href="https://github.com/chibx"
+                            title="Follow me on GitHub"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Icon name="i-fa6-brands:github" size="35" />
                         </a>
-                        <a href="https://www.linkedin.com/in/chinaemerem-chiebidolu-802388258/"
-                            title="Follow me on LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <a
+                            href="https://www.linkedin.com/in/chinaemerem-chiebidolu-802388258/"
+                            title="Follow me on LinkedIn"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Icon name="i-fa6-brands:linkedin" size="35" />
                         </a>
-                        <a href="https://twitter.com/chiebidolu06" title="Follow me on Twitter" target="_blank"
-                            rel="noopener noreferrer">
+                        <a
+                            href="https://twitter.com/chiebidolu06"
+                            title="Follow me on Twitter"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <Icon name="i-fa6-brands:x-twitter" size="35" />
                         </a>
                     </div>
@@ -32,7 +44,7 @@ useHead({
                 </div>
             </div>
             <div class="portrait relative w-1/3 min-w-[300px] overflow-hidden">
-                <div class="pic relative">
+                <div class="pic relative rounded-full overflow-hidden">
                     <NuxtImg class="w-full" src="/pic.webp" alt="Image" />
                 </div>
             </div>
@@ -43,10 +55,8 @@ useHead({
             <div class="mt-5 flex justify-center text-lg">
                 <p>
                     My name is Chiebidolu Chinaemerem. I am a fullstack web developer who is very passionate about web
-                    development and technology.
-                    I love to build scalable and functional fullstack web applications, with my goto programming
-                    language
-                    being <strong>JavaScript</strong>.
+                    development and technology. I love to build scalable and functional fullstack web applications, with
+                    my goto programming language being <strong>JavaScript</strong>.
                 </p>
             </div>
             <NuxtLink to="/about">MORE ABOUT ME</NuxtLink>
@@ -76,8 +86,8 @@ useHead({
                     <div>
                         <h2 class="text-3xl bebas-neue">Performance</h2>
                         <p class="mt-2.5">
-                            When you hire me, you'll get high performant web applications.
-                            Scalability and efficiency would be the least of your concerns
+                            When you hire me, you'll get high performant web applications. Scalability and efficiency
+                            would be the least of your concerns
                         </p>
                     </div>
                 </div>
@@ -99,9 +109,7 @@ useHead({
                     </div>
                     <div>
                         <h2 class="text-3xl bebas-neue">Budget Friendly</h2>
-                        <p class="mt-2.5">
-                            When you hire me, you get excellent results at an affordable price.
-                        </p>
+                        <p class="mt-2.5">When you hire me, you get excellent results at an affordable price.</p>
                     </div>
                 </div>
                 <div>
@@ -110,9 +118,7 @@ useHead({
                     </div>
                     <div>
                         <h2 class="text-3xl bebas-neue">Error Handling</h2>
-                        <p class="mt-2.5">
-                            Nobody is perfect, but that doesn't mean I let those nasty errors show up
-                        </p>
+                        <p class="mt-2.5">Nobody is perfect, but that doesn't mean I let those nasty errors show up</p>
                     </div>
                 </div>
                 <div>
@@ -121,9 +127,7 @@ useHead({
                     </div>
                     <div>
                         <h2 class="text-3xl bebas-neue">Outstanding Result</h2>
-                        <p class="mt-2.5">
-                            When you hire me, you'll surely be glad you did.
-                        </p>
+                        <p class="mt-2.5">When you hire me, you'll surely be glad you did.</p>
                     </div>
                 </div>
             </div>
@@ -134,7 +138,7 @@ useHead({
                 <h2 class="before-line text-5xl bebas-neue relative inline-block">SKILLS</h2>
             </div>
             <div class="mt-20">
-                <Skills v-for="_skills, type in skills" :skills="_skills" :type="type" :key="type" />
+                <Skills v-for="(_skills, type) in skills" :skills="_skills" :type="type" :key="type" />
             </div>
         </section>
 
@@ -189,11 +193,11 @@ a.resume {
 }
 
 .pic::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    background-image: linear-gradient(to bottom, transparent 25%, rgba(0, 0, 0, 0.8) 100%);
 }
 
 .about {
@@ -325,7 +329,6 @@ a.resume {
 }
 
 @media (max-width: 450px) {
-
     .about h2,
     .benefit-head h2 {
         font-size: 2.5rem;
