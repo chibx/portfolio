@@ -45,7 +45,7 @@ useHead({
             </div>
             <div class="portrait relative w-1/3 min-w-[300px] overflow-hidden">
                 <div class="pic relative rounded-full overflow-hidden">
-                    <NuxtImg class="w-full" src="/pic.webp" alt="Image" />
+                    <NuxtImg class="w-full" width="500" height="500" src="/pic.webp" alt="Image" />
                 </div>
             </div>
         </section>
